@@ -774,10 +774,10 @@
   ],
   "text_variables": {
     "MIXLIB_KICAD_3DMODELS_DIR": "${KIPRJMOD}/${MIXLIB_KICAD_BASE_PATH}/3dmodels",
-    "MIXLIB_KICAD_BASE_PATH": "../ext/kicad/mixlib-kicad",
+    "MIXLIB_KICAD_BASE_PATH": "ext/kicad/lib/mixlib-kicad",
     "MIXLIB_KICAD_FOOTPRINTS_DIR": "${KIPRJMOD}/${MIXLIB_KICAD_BASE_PATH}/footprints",
     "MIXLIB_KICAD_SPICE_DIR": "${KIPRJMOD}/${MIXLIB_KICAD_BASE_PATH}/spice",
     "MIXLIB_KICAD_SYMBOLS_DIR": "${KIPRJMOD}/${MIXLIB_KICAD_BASE_PATH}/symbols",
-    "_PROJECT_ROOT": "${KIPRJMOD}/../.."
+    "_PROJECT_ROOT": "${KIPRJMOD}"
   }
 }

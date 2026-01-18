@@ -2,6 +2,13 @@ project_name:
   type: str
   help: What is your repository's name?
 
+project_layout:
+  type: str
+  help: How do you want your project to be laid out?
+  choices:
+    - single
+    - multi
+
 main_kicad_project_name:
   type: str
   help: What is the name of your KiCAD project?
