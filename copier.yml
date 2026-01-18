@@ -12,6 +12,8 @@ project_layout:
 main_kicad_project_name:
   type: str
   help: What is the name of your KiCAD project?
+  default: "{{ project_name }}"
+  when: "{{ project_layout == 'multi' }}"
 
 mixlib_kicad_clone_url:
   type: str
@@ -22,5 +24,5 @@ mixlib_kicad_clone_url:
     - https://github.com/flisboac/mixlib-kicad.git
 
 _tasks:
-  - command: ["git", "submodule", "add", "{{ mixlib_kicad_clone_url }}", "ext/kicad/mixlib-kicad"]
+  - command: ["git", "submodule", "add", "{{ mixlib_kicad_clone_url }}", "ext/kicad/lib/mixlib-kicad"]
     when: "{{ _copier_operation == 'copy' }}"
