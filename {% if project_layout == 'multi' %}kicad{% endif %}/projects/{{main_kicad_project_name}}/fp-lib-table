@@ -31,4 +31,5 @@
   (lib (name "mixlib-converter-board")(type "KiCad")(uri "${KIPRJMOD}/../../../ext/kicad/lib/mixlib-kicad/footprints/mixlib-converter-board.pretty")(options "")(descr ""))
   (lib (name "mixlib-connectors-usb")(type "KiCad")(uri "${KIPRJMOD}/../../../ext/kicad/lib/mixlib-kicad/footprints/mixlib-connectors-usb.pretty")(options "")(descr ""))
   (lib (name "mixlib-connector-jumper")(type "KiCad")(uri "${KIPRJMOD}/../../../ext/kicad/lib/mixlib-kicad/footprints/mixlib-connector-jumper.pretty")(options "")(descr ""))
+  (lib (name "mixlib-electromechanic-switch")(type "KiCad")(uri "${KIPRJMOD}/../../../ext/kicad/lib/mixlib-kicad/footprints/mixlib-electromechanic-switch.pretty")(options "")(descr ""))
 )
