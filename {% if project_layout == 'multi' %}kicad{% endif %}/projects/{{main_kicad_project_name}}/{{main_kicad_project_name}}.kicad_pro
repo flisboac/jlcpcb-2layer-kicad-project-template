@@ -517,43 +517,79 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.1016,
+        "track_width": 0.1524,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
       },
       {
-        "bus_width": 16,
+        "name": "Analog",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgb(0, 132, 132)",
+        "tuning_profile": ""
+      },
+      {
+        "diff_pair_gap": 0.1524,
+        "name": "Analog_USB",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgb(0, 194, 194)",
+        "track_width": 0.1524,
+        "tuning_profile": ""
+      },
+      {
+        "name": "Digital",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgb(0, 0, 194)",
+        "track_width": 0.127,
+        "tuning_profile": ""
+      },
+      {
+        "name": "GPIO",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgb(0, 0, 132)",
+        "track_width": 0.1524,
+        "tuning_profile": ""
+      },
+      {
+        "bus_width": 18,
         "clearance": 0.1,
         "name": "HighPwrLowVolt_5A_30V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 3,
+        "priority": 7,
         "schematic_color": "rgb(255, 0, 0)",
-        "track_width": 1.778,
+        "track_width": 1.524,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
-        "wire_width": 10
+        "wire_width": 12
       },
       {
         "bus_width": 16,
         "clearance": 0.15,
         "name": "HighPwrMidVolt_5A_60V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 7,
+        "priority": 11,
         "schematic_color": "rgb(255, 0, 0)",
         "track_width": 1.778,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
-        "wire_width": 10
+        "wire_width": 12
       },
       {
         "bus_width": 14,
         "clearance": 0.1,
         "name": "LowPwrLowVolt_1A_30V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 4,
         "schematic_color": "rgb(204, 102, 0)",
         "track_width": 0.1524,
+        "tuning_profile": "",
         "via_diameter": 0.4,
         "via_drill": 0.2,
         "wire_width": 8
@@ -563,9 +599,10 @@
         "clearance": 0.15,
         "name": "LowPwrMidVolt_1A_60V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 4,
+        "priority": 8,
         "schematic_color": "rgb(204, 102, 0)",
         "track_width": 0.1524,
+        "tuning_profile": "",
         "via_diameter": 0.4,
         "via_drill": 0.2,
         "wire_width": 8
@@ -575,9 +612,10 @@
         "clearance": 0.1,
         "name": "MidPwrLowVolt_2A_30V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 5,
         "schematic_color": "rgb(221, 133, 0)",
         "track_width": 0.381,
+        "tuning_profile": "",
         "via_diameter": 0.4,
         "via_drill": 0.2,
         "wire_width": 8
@@ -587,21 +625,23 @@
         "clearance": 0.1,
         "name": "MidPwrLowVolt_3A_30V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 6,
         "schematic_color": "rgb(255, 153, 0)",
         "track_width": 0.762,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
-        "wire_width": 8
+        "wire_width": 10
       },
       {
         "bus_width": 14,
         "clearance": 0.15,
         "name": "MidPwrMidVolt_2A_60V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 5,
+        "priority": 9,
         "schematic_color": "rgb(221, 133, 0)",
         "track_width": 0.381,
+        "tuning_profile": "",
         "via_diameter": 0.4,
         "via_drill": 0.2,
         "wire_width": 8
@@ -611,12 +651,13 @@
         "clearance": 0.15,
         "name": "MidPwrMidVolt_3A_60V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 6,
+        "priority": 10,
         "schematic_color": "rgb(255, 153, 0)",
         "track_width": 0.762,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
-        "wire_width": 8
+        "wire_width": 10
       }
     ],
     "meta": {
@@ -626,8 +667,72 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
+        "netclass": "Analog",
+        "pattern": "(/|/.*/)?(.*_)?(A(N?|NA?|DC?))\\d+\\"
+      },
+      {
+        "netclass": "Analog_USB",
+        "pattern": "(/|/.*/)?(.*_)?(D[pP]?|(SS)?(R|T)X[pP]?\\d?)(\\+|\\-|_P|_N)"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "(/|/.*/)?.*_?(SDA|SCL)(_TR)?"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "(/|/.*/)?.*_?(RX(_?TX)?|TX(_?RX)?)\\d?(_TR)?"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "(/|/.*/)?(.*_)?(MISO|MOSI|SDI|SDO|SD|WS)(_TR)?"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "(/|/.*/)?(.*_)?(SCK|CLK|CLOCK|MCK)(_TR)?"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "(/|/.*/)?(.*_)?DATA(_TR)?"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "(/|/.*/)?(~\\{)?(.*_)?D(ATA_)?(IN?|O(UT)?|IO)?(_TR)?"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "(/|/.*/)?(~\\{)?(.*_)?(SWCLK|SWDIO|TD(I|O)|T(MS|CK))(_TR)?"
+      },
+      {
+        "netclass": "GPIO",
+        "pattern": "(/|/.*/)?(GP|P[A-Z]|B(T|TN)?)\\d+\\"
+      },
+      {
+        "netclass": "GPIO",
+        "pattern": "(/|/.*/)?([nN](S|T))?(CE|INT|IRQ|EN|DIS|RST|FLT|FAULT|MODE|_ST|_SNS|_SENSE)(_.*)?\\"
+      },
+      {
         "netclass": "HighPwrLowVolt_5A_30V",
-        "pattern": "*/VBUS"
+        "pattern": "(/|/.*/)?V(PMID|OTG|BUS|EXT|AC1|AC2|SEL|OTG|SYS|SWN)\\d*(_.*(?<!_EN|_DIS|_FB|_PG|_FLT|_FAULT|_G|_P|_MODE|_ST|_SNS|_SENSE))?"
+      },
+      {
+        "netclass": "LowPwrLowVolt_1A_30V",
+        "pattern": "(/|/.*/)?V(?!PMID|OTG|BUS|EXT|AC1|AC2|SEL|OTG|SYS|SWN)[a-zA-Z]+\\d*_?LP(_.*(?<!_EN|_DIS|_FB|_PG|_FLT|_FAULT|_G|_P|_MODE|_ST|_SNS|_SENSE))?"
+      },
+      {
+        "netclass": "LowPwrLowVolt_1A_30V",
+        "pattern": "(/|/.*/)?\\d+V\\d*_?LP(_.*(?<!_EN|_DIS|_FB|_PG|_FLT|_FAULT|_G|_P|_MODE|_ST|_SNS|_SENSE))?"
+      },
+      {
+        "netclass": "MidPwrLowVolt_3A_30V",
+        "pattern": "(/|/.*/)?(V(?!PMID|OTG|BUS|EXT|AC1|AC2|SEL|OTG|SYS|SWN)[a-zA-Z]+\\d*(?<!LP|_LP))(_.*(?<!_EN|_DIS|_FB|_PG|_FLT|_FAULT|_G|_P|_MODE|_ST|_SNS|_SENSE))?"
+      },
+      {
+        "netclass": "MidPwrLowVolt_3A_30V",
+        "pattern": "(/|/.*/)?(\\d+V\\d*(?<!LP|_LP))(_.*(?<!_EN|_DIS|_FB|_PG|_FLT|_FAULT|_G|_P|_MODE|_ST|_SNS|_SENSE))?"
+      },
+      {
+        "netclass": "Default",
+        "pattern": ""
       }
     ]
   },
